@@ -1,7 +1,11 @@
 package polymorphism;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("tv")
 public class LgTV implements Tv {
-	
+	@Autowired
 	private Speaker speaker;
 	
 	public LgTV() {

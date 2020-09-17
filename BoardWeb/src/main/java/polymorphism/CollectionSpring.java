@@ -3,18 +3,15 @@ package polymorphism;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-public class TvSpring {
+public class CollectionSpring {
 
 	public static void main(String[] args) {
-		AbstractApplicationContext factory = 
+		AbstractApplicationContext factory =
 				new GenericXmlApplicationContext("applicationContext.xml");
-
-		Tv tv = (Tv)factory.getBean("tv");
-		tv.powerOn();
-		tv.powerOff();
-		tv.volumeDown();
-
 		
+		CollectionBean bean = (CollectionBean)factory.getBean("col");
+		bean.printAddress();
+
 	}
 
 }
